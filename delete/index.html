@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your data | NabNear</title><style>
+:root{--ink:#0f1b2d;--muted:#4a5568;--blue:#1f6feb;--bg:#f7f9fc;--line:#e2e8f0}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+header .wrap{display:flex;align-items:center;gap:10px;height:60px}
+.logo{width:32px;height:32px;border-radius:9px;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center}
+header a{color:var(--ink);text-decoration:none;font-weight:800;font-size:20px}
+nav{margin-left:auto;display:flex;gap:16px;font-size:15px}
+nav a{font-weight:600;font-size:15px;color:var(--muted)}
+main{padding:28px 0 60px}
+h1{font-size:30px;margin:0 0 6px}h2{font-size:21px;margin:30px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#eef3fb}
+.tbl{overflow-x:auto}
+a{color:var(--blue)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:18px 0 40px}
+
+  h1{font-size:1.6rem} input{font:inherit;font-size:1.2rem;letter-spacing:2px;padding:12px;width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:10px;text-transform:uppercase}
+  button{margin-top:12px;font:inherit;font-weight:700;padding:12px 18px;border:0;border-radius:10px;background:#b91c1c;color:#fff;cursor:pointer}
+  button:disabled{opacity:.6} #msg{margin-top:16px;font-weight:600} small{color:#4a5568}
+</style></head><body>
+<header><div class="wrap"><div class="logo">N</div><a href="/">NabNear</a>
+<nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete/">Delete data</a></nav></div></header>
+<main><div class="wrap"><h1>Delete your NabNear data</h1>
+<p>Enter the deletion code shown in the NabNear app under <b>Settings</b>. We delete the account linked to that code and everything connected to it. We don't ask for your name or email.</p>
+<form id="f"><input id="code" placeholder="XXXX-XXXX-XXXX" autocomplete="off" maxlength="14" inputmode="text" autocapitalize="characters" spellcheck="false" required>
+<button id="b" type="submit">Delete my data</button></form>
+<p id="msg" role="status"></p>
+<p><small>Lost your code? Email <a href="mailto:hi@nabnear.com">hi@nabnear.com</a>. Without the code we cannot tell which anonymous account is yours. <a href="/privacy/">Privacy Policy</a></small></p>
+<script>
+const URL_ = 'https://uzdefozshwgxrivwqguh.supabase.co/rest/v1/rpc/delete_by_code';
+const KEY = 'sb_publishable_MYnXNwUPONm8krmaYj3v6w_--CPEBAS';
+// Show the code as XXXX-XXXX-XXXX while typing, like the app.
+const input = document.getElementById('code');
+input.addEventListener('input', () => {
+  const raw = input.value.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 12);
+  input.value = raw.match(/.{1,4}/g)?.join('-') ?? '';
+});
+document.getElementById('f').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const code = document.getElementById('code').value.trim();
+  if (!confirm('Delete all NabNear data for this code? This cannot be undone.')) return;
+  const b = document.getElementById('b'), msg = document.getElementById('msg');
+  b.disabled = true; msg.textContent = 'Working…';
+  try {
+    const r = await fetch(URL_, { method: 'POST', headers: { apikey: KEY, 'Content-Type': 'application/json' }, body: JSON.stringify({ p_code: code }) });
+    const body = await r.json().catch(() => null);
+    if (!r.ok) msg.textContent = (body && body.message) || 'Something went wrong. Please try again later.';
+    else msg.textContent = body === true ? 'Done. Your NabNear data has been deleted.' : 'That code was not found. Check it and try again.';
+  } catch { msg.textContent = 'Could not reach NabNear. Check your connection and try again.'; }
+  b.disabled = false;
+});
+</script></div></main>
+<footer><div class="wrap">NabNear LLC · 216 Buckingham Pl FL 1, Philadelphia, PA 19104, USA · <a href="mailto:hi@nabnear.com">hi@nabnear.com</a></div></footer>
+</body></html>
