@@ -1,38 +1,107 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#040E1C"><meta property="og:title" content="NabNear | Stop circling."><meta property="og:description" content="Drivers leaving a street spot, matched with drivers nearby who need one."><meta property="og:image" content="https://nabnear.com/og.png"><meta property="og:url" content="https://nabnear.com/"><meta name="twitter:card" content="summary_large_image">
-<title>NabNear | Stop circling.</title><style>
-:root{--ink:#0f1b2d;--muted:#4a5568;--blue:#1f6feb;--bg:#f7f9fc;--line:#e2e8f0}
-body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-header{background:#040E1C}
-.wrap{max-width:760px;margin:0 auto;padding:0 18px}
-header .wrap{display:flex;align-items:center;gap:10px;height:60px}
-.brand img{height:30px;width:auto;display:block}@media(max-width:480px){.brand img{height:20px}nav{gap:10px}nav a{font-size:13px;white-space:nowrap}.dx{display:none}header .wrap{height:54px}}
-header a{text-decoration:none}
-nav{margin-left:auto;display:flex;gap:16px;font-size:15px}
-nav a{font-weight:600;font-size:15px;color:#cbd5e1}nav a:hover{color:#FDBF27}
-main{padding:28px 0 60px}
-h1{font-size:30px;margin:0 0 6px}h2{font-size:21px;margin:30px 0 8px}
-.meta{color:var(--muted);font-size:14px;margin-bottom:18px}
-table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff}
-th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-th{background:#eef3fb}
-.tbl{overflow-x:auto}
-a{color:var(--blue)}
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;padding:18px 0 40px}
-</style></head><body>
-<header><div class="wrap"><a href="/" class="brand"><img src="/logo.png" alt="NabNear" width="221" height="30"></a>
-<nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/delete/">Delete<span class="dx"> data</span></a></nav></div></header>
-<main><div class="wrap"><p class="meta">Coming soon to Philadelphia</p>
-<h1>Stop circling.</h1>
-<p>NabNear connects drivers who are about to leave a street parking spot with drivers nearby who need one.</p>
-<ul>
-<li><b>Leaving?</b> Tap once while parked, before you pull out.</li>
-<li><b>Looking?</b> Get an alert when a spot is opening near you.</li>
-<li><b>Nabbed it.</b> Confirm the outcome so the map stays accurate.</li>
-</ul>
-<p>Free and anonymous. A shared spot is never held, reserved or sold.</p>
-<p>Questions, partnerships or early access:<br><a href="mailto:hi@nabnear.com">hi@nabnear.com</a></p>
-<p class="meta">&copy; 2026 NabNear LLC, a Pennsylvania limited liability company. Please never use a phone while driving.<br>
-<a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Use</a> · <a href="/delete/">Delete your data</a></p></div></main>
-<footer><div class="wrap">NabNear LLC · 216 Buckingham Pl FL 1, Philadelphia, PA 19104, USA · <a href="mailto:hi@nabnear.com">hi@nabnear.com</a></div></footer>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NabNear | Stop circling.</title><meta name="description" content="NabNear connects drivers about to leave a street parking spot with drivers nearby who need one. Free and anonymous. Starting in Philadelphia.">
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#040E1C"><link rel="canonical" href="https://nabnear.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NabNear"><meta property="og:title" content="NabNear | Stop circling."><meta property="og:description" content="NabNear connects drivers about to leave a street parking spot with drivers nearby who need one. Free and anonymous. Starting in Philadelphia."><meta property="og:image" content="https://nabnear.com/og.png"><meta property="og:url" content="https://nabnear.com/"><meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap">
+<a href="/" class="brand" aria-label="NabNear home"><img src="/assets/logo-white.png" alt="NabNear" width="222" height="30"></a>
+<nav class="nav" aria-label="Main"><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a class="btn btn-curb btn-sm" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="/" aria-current="page">Home</a><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a></div></details>
+</div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<div>
+<p class="status"><i aria-hidden="true"></i>In testing in Philadelphia</p>
+<h1><span>Stop</span><span>circling.</span></h1>
+<p class="lede">When a driver is about to leave a street spot, they tap once. When you&rsquo;re nearby and looking, you hear about it. That&rsquo;s NabNear: free, anonymous, and built for city blocks.</p>
+<div class="actions"><a class="btn btn-curb" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a><a class="btn btn-ghost" href="#how">See how it works</a></div>
+</div>
+<div class="street"><svg viewBox="0 0 640 520" role="img" aria-labelledby="st-title st-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="st-title">A Philadelphia street seen from above</title>
+<desc id="st-desc">A parked car pulls out, its curb space lights up as an open spot, and a nearby driver pulls in.</desc>
+<defs>
+<clipPath id="clip"><rect width="640" height="520" rx="28"/></clipPath>
+<linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#FDBF27" stop-opacity=".35"/><stop offset="1" stop-color="#FDBF27" stop-opacity="0"/></linearGradient>
+</defs>
+<g clip-path="url(#clip)">
+<rect width="640" height="520" fill="#0D1F36"/>
+<rect x="0" y="0" width="40" height="118" fill="#102238"/><rect x="0" y="112" width="40" height="6" fill="#203B5E"/><rect x="8" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="42" y="0" width="36" height="118" fill="#183455"/><rect x="42" y="112" width="36" height="6" fill="#203B5E"/><rect x="50" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="80" y="0" width="44" height="118" fill="#183455"/><rect x="80" y="112" width="44" height="6" fill="#203B5E"/><rect x="126" y="0" width="52" height="118" fill="#12263F"/><rect x="126" y="112" width="52" height="6" fill="#203B5E"/><rect x="180" y="0" width="48" height="118" fill="#102238"/><rect x="180" y="112" width="48" height="6" fill="#203B5E"/><rect x="188" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="230" y="0" width="44" height="118" fill="#15304E"/><rect x="230" y="112" width="44" height="6" fill="#203B5E"/><rect x="238" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="276" y="0" width="48" height="118" fill="#102238"/><rect x="276" y="112" width="48" height="6" fill="#203B5E"/><rect x="284" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="326" y="0" width="40" height="118" fill="#15304E"/><rect x="326" y="112" width="40" height="6" fill="#203B5E"/><rect x="368" y="0" width="44" height="118" fill="#102238"/><rect x="368" y="112" width="44" height="6" fill="#203B5E"/><rect x="376" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="414" y="0" width="36" height="118" fill="#12263F"/><rect x="414" y="112" width="36" height="6" fill="#203B5E"/><rect x="422" y="92" width="10" height="10" rx="2" fill="#24426A"/><rect x="452" y="0" width="40" height="118" fill="#102238"/><rect x="452" y="112" width="40" height="6" fill="#203B5E"/><rect x="494" y="0" width="24" height="118" fill="#15304E"/><rect x="494" y="112" width="24" height="6" fill="#203B5E"/>
+<rect x="0" y="392" width="52" height="128" fill="#183455"/><rect x="0" y="392" width="52" height="6" fill="#203B5E"/><rect x="54" y="392" width="40" height="128" fill="#12263F"/><rect x="54" y="392" width="40" height="6" fill="#203B5E"/><rect x="62" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="96" y="392" width="36" height="128" fill="#15304E"/><rect x="96" y="392" width="36" height="6" fill="#203B5E"/><rect x="134" y="392" width="44" height="128" fill="#102238"/><rect x="134" y="392" width="44" height="6" fill="#203B5E"/><rect x="142" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="180" y="392" width="52" height="128" fill="#12263F"/><rect x="180" y="392" width="52" height="6" fill="#203B5E"/><rect x="234" y="392" width="40" height="128" fill="#102238"/><rect x="234" y="392" width="40" height="6" fill="#203B5E"/><rect x="242" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="276" y="392" width="48" height="128" fill="#15304E"/><rect x="276" y="392" width="48" height="6" fill="#203B5E"/><rect x="284" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="326" y="392" width="52" height="128" fill="#15304E"/><rect x="326" y="392" width="52" height="6" fill="#203B5E"/><rect x="334" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="380" y="392" width="52" height="128" fill="#12263F"/><rect x="380" y="392" width="52" height="6" fill="#203B5E"/><rect x="388" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="434" y="392" width="40" height="128" fill="#12263F"/><rect x="434" y="392" width="40" height="6" fill="#203B5E"/><rect x="442" y="406" width="10" height="10" rx="2" fill="#24426A"/><rect x="476" y="392" width="40" height="128" fill="#102238"/><rect x="476" y="392" width="40" height="6" fill="#203B5E"/>
+<rect x="0" y="118" width="520" height="34" fill="#1B3352"/>
+<rect x="0" y="358" width="520" height="34" fill="#1B3352"/>
+<circle cx="36" cy="135" r="12" fill="#1E4A52"/><circle cx="33" cy="132" r="6" fill="#28606A"/><circle cx="150" cy="135" r="12" fill="#1E4A52"/><circle cx="147" cy="132" r="6" fill="#28606A"/><circle cx="392" cy="135" r="12" fill="#1E4A52"/><circle cx="389" cy="132" r="6" fill="#28606A"/><circle cx="470" cy="135" r="12" fill="#1E4A52"/><circle cx="467" cy="132" r="6" fill="#28606A"/>
+<circle cx="70" cy="375" r="12" fill="#1E4A52"/><circle cx="67" cy="372" r="6" fill="#28606A"/><circle cx="190" cy="375" r="12" fill="#1E4A52"/><circle cx="187" cy="372" r="6" fill="#28606A"/><circle cx="330" cy="375" r="12" fill="#1E4A52"/><circle cx="327" cy="372" r="6" fill="#28606A"/><circle cx="450" cy="375" r="12" fill="#1E4A52"/><circle cx="447" cy="372" r="6" fill="#28606A"/>
+<rect x="0" y="152" width="640" height="206" fill="#0A182B"/>
+<rect x="520" y="0" width="120" height="520" fill="#0A182B"/>
+<line x1="0" y1="152" x2="520" y2="152" stroke="#2B4060" stroke-width="2"/>
+<line x1="0" y1="358" x2="520" y2="358" stroke="#2B4060" stroke-width="2"/>
+<line x1="520" y1="0" x2="520" y2="152" stroke="#2B4060" stroke-width="2"/>
+<line x1="520" y1="358" x2="520" y2="520" stroke="#2B4060" stroke-width="2"/>
+<line x1="0" y1="255" x2="488" y2="255" stroke="#3A5579" stroke-width="3" stroke-dasharray="24 18"/>
+<g fill="#3A5579"><rect x="530" y="126" width="7" height="22" rx="1.5"/><rect x="543" y="126" width="7" height="22" rx="1.5"/><rect x="556" y="126" width="7" height="22" rx="1.5"/><rect x="569" y="126" width="7" height="22" rx="1.5"/><rect x="582" y="126" width="7" height="22" rx="1.5"/><rect x="595" y="126" width="7" height="22" rx="1.5"/><rect x="608" y="126" width="7" height="22" rx="1.5"/><rect x="621" y="126" width="7" height="22" rx="1.5"/><rect x="530" y="362" width="7" height="22" rx="1.5"/><rect x="543" y="362" width="7" height="22" rx="1.5"/><rect x="556" y="362" width="7" height="22" rx="1.5"/><rect x="569" y="362" width="7" height="22" rx="1.5"/><rect x="582" y="362" width="7" height="22" rx="1.5"/><rect x="595" y="362" width="7" height="22" rx="1.5"/><rect x="608" y="362" width="7" height="22" rx="1.5"/><rect x="621" y="362" width="7" height="22" rx="1.5"/><rect x="496" y="160" width="20" height="7" rx="1.5"/><rect x="496" y="173" width="20" height="7" rx="1.5"/><rect x="496" y="186" width="20" height="7" rx="1.5"/><rect x="496" y="199" width="20" height="7" rx="1.5"/><rect x="496" y="212" width="20" height="7" rx="1.5"/><rect x="496" y="225" width="20" height="7" rx="1.5"/><rect x="496" y="238" width="20" height="7" rx="1.5"/><rect x="496" y="251" width="20" height="7" rx="1.5"/><rect x="496" y="264" width="20" height="7" rx="1.5"/><rect x="496" y="277" width="20" height="7" rx="1.5"/><rect x="496" y="290" width="20" height="7" rx="1.5"/><rect x="496" y="303" width="20" height="7" rx="1.5"/><rect x="496" y="316" width="20" height="7" rx="1.5"/><rect x="496" y="329" width="20" height="7" rx="1.5"/><rect x="496" y="342" width="20" height="7" rx="1.5"/></g>
+<g transform="translate(24,124)"><rect width="74" height="22" rx="5" fill="#F4F6F8"/><rect x="2" y="2" width="70" height="18" rx="4" fill="#0B3B2A"/><text x="37" y="15.5" text-anchor="middle" font-family="Public Sans,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#fff">Pine St</text></g>
+<g transform="translate(540,24)"><rect width="80" height="22" rx="5" fill="#F4F6F8"/><rect x="2" y="2" width="76" height="18" rx="4" fill="#0B3B2A"/><text x="40" y="15.5" text-anchor="middle" font-family="Public Sans,Arial,sans-serif" font-size="11.5" font-weight="700" fill="#fff">S 19th St</text></g>
+<g transform="translate(-30,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(54,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(138,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(322,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(406,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g>
+<g transform="translate(10,318)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(94,318)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(210,318)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(294,318)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g><g transform="translate(378,318)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g>
+<g class="slot"><rect x="236" y="156" width="74" height="38" rx="10" fill="#FDBF27" fill-opacity=".14" stroke="#FDBF27" stroke-width="2.5" stroke-dasharray="7 6"/></g>
+<g class="leaver"><g transform="translate(236,158)"><rect width="74" height="34" rx="10" fill="#2C446B"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#3D5884"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/></g></g>
+<g class="seeker"><g transform="translate(236,158)"><path d="M74 6 L150 -8 L150 42 L74 28 Z" fill="url(#beam)"/><rect width="74" height="34" rx="10" fill="#EDF1F6"/><rect x="16" y="5" width="44" height="24" rx="6" fill="#FFFFFF"/><rect x="52" y="7" width="7" height="20" rx="3" fill="#0B1A2E"/><rect x="12" y="8" width="5" height="18" rx="2.5" fill="#0B1A2E"/><rect x="69" y="5" width="5" height="7" rx="2" fill="#FDBF27"/><rect x="69" y="22" width="5" height="7" rx="2" fill="#FDBF27"/></g></g>
+<circle class="halo" cx="273" cy="176" r="46" fill="none" stroke="#FDBF27" stroke-width="3"/>
+<g class="pin"><path d="M273 172c-3-6-26-30-26-48a26 26 0 0 1 52 0c0 18-23 42-26 48z" fill="#FDBF27"/><path d="M265 110h10a9 9 0 0 1 0 18h-5v10h-5z" fill="#040E1C"/></g>
+<g class="chip-open"><rect x="312" y="62" width="196" height="46" rx="23" fill="#FFFFFF"/><circle cx="336" cy="85" r="6" fill="#FDBF27"/><text x="350" y="90" font-family="Public Sans,Arial,sans-serif" font-size="15" font-weight="700" fill="#040E1C">Spot opening here</text></g>
+<g class="chip-got"><rect x="312" y="62" width="196" height="46" rx="23" fill="#FDBF27"/><path d="M330 85l6 6 12-12" fill="none" stroke="#040E1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="356" y="90" font-family="Public Sans,Arial,sans-serif" font-size="15" font-weight="700" fill="#040E1C">Nabbed. Map updated.</text></g>
+</g></svg></div>
+</div></section>
+
+<section class="band" id="how" aria-labelledby="how-h"><div class="wrap">
+<div class="head-row"><h2 class="h2" id="how-h">Three taps between two drivers.</h2><p class="intro">No bidding, no waiting in the street, no account to fill in. One driver shares, another finds, and the map keeps itself honest.</p></div>
+<ol class="steps">
+<li class="step"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15h11l2-5H6l-2 5z"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="14" cy="16.5" r="1.6"/><path d="M17 8l4 0M19 6l2 2-2 2"/></svg></div><p class="n">Step 1</p><h3>Leaving?</h3><p>Still parked and about to go? Tap once before you pull out. Drivers nearby see a spot is opening.</p></li>
+<li class="step"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg></div><p class="n">Step 2</p><h3>Looking?</h3><p>Turn on an alert and NabNear tells you when a spot is opening close to you, or close to where you&rsquo;re headed.</p></li>
+<li class="step"><div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-.6-1.2-6-6.5-6-10.5a6 6 0 0 1 12 0c0 4-5.4 9.3-6 10.5z"/><path d="M9.3 10.4l1.9 1.9 3.6-3.6"/></svg></div><p class="n">Step 3</p><h3>Nabbed it.</h3><p>Got the spot, or someone beat you to it? Say so with one tap, so the map stays honest for everyone.</p></li>
+</ol>
+<div class="alerts">
+<div class="alert"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="8"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></div><div><h3>Alert me here</h3><p>Already circling? NabNear watches for spots opening within about 400&nbsp;m of you for the next 15 minutes. Tap Stop any time.</p></div></div>
+<div class="alert"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 4h11l-2 3.5 2 3.5H5"/></svg></div><div><h3>Alert me at&hellip;</h3><p>Heading somewhere? Pick the address and when you&rsquo;ll arrive. Alerts start about 10 minutes before you get there, and NabNear never reads your current location for this.</p></div></div>
+</div>
+</div></section>
+
+<section class="band band-dark" aria-labelledby="rules-h"><div class="wrap promises">
+<div><h2 class="h2" id="rules-h">The rules we built it on.</h2><p class="intro">Street parking belongs to everyone. NabNear only passes along a heads-up, and these lines don&rsquo;t move.</p></div>
+<dl>
+<div><dt>Never held, reserved or sold</dt><dd>Nobody waits in a spot for you and nobody pays for one. A shared spot is a heads-up, and the usual first-come rules still apply.</dd></div>
+<div><dt>Anonymous by design</dt><dd>No name, email or phone number. The app creates a random account the first time you open it, and other drivers never see it.</dd></div>
+<div><dt>Location only when you tap</dt><dd>Your location leaves your phone only when you tap Leaving now or Alert me here. No background tracking, ever.</dd></div>
+<div><dt>Free</dt><dd>No fees, no ads, no data sold. Delete everything from the app or from <a href="/delete/" style="color:#fff">this site</a> whenever you like.</dd></div>
+</dl>
+</div></section>
+
+<section class="band band-paper" aria-labelledby="city-h"><div class="wrap city">
+<div><h2 class="h2" id="city-h">Starting on Philadelphia&rsquo;s blocks.</h2><p class="intro">Rowhouse streets, tight curbs and spots that open one at a time. NabNear is being tested here first, block by block, before it goes anywhere else.</p></div>
+<div class="signs" aria-label="Philadelphia streets">
+<span class="sign">Market St</span><span class="sign">Chestnut St</span><span class="sign">Walnut St</span><span class="sign">Locust St</span><span class="sign on">Spruce St</span><span class="sign">Pine St</span><span class="sign">Lombard St</span><span class="sign">South St</span><span class="sign">Broad St</span><span class="sign">S 13th St</span><span class="sign">S 19th St</span><span class="sign">S 22nd St</span><span class="sign">Baltimore Ave</span><span class="sign">Girard Ave</span>
+</div>
+</div></section>
+
+<section class="safety" aria-label="Safety"><div class="wrap"><svg viewBox="0 0 40 40" fill="none" stroke="#040E1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="4" width="16" height="30" rx="4"/><path d="M4 36L36 4"/></svg><p>Park first, then tap.<small>Never use NabNear while driving, including at red lights. Hand the phone to a passenger, or wait until you&rsquo;re parked.</small></p></div></section>
+
+<section class="band closer"><div class="wrap">
+<h2 class="h2">Want in early?</h2>
+<a class="btn btn-ink" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<div class="foot-grid">
+<div><img src="/assets/logo-white.png" alt="NabNear" width="207" height="28">
+<address>NabNear LLC<br>216 Buckingham Pl, Floor 1<br>Philadelphia, PA 19104, USA<br><a href="mailto:hi@nabnear.com">hi@nabnear.com</a></address></div>
+<div><h2>NabNear</h2><ul><li><a href="/how-it-works/">How it works</a></li><li><a href="/about/">About</a></li><li><a href="/support/">Support</a></li><li><a href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Early access</a></li></ul></div>
+<div><h2>Your data</h2><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/delete/">Delete your data</a></li></ul></div>
+</div>
+<div class="fine"><span>&copy; 2026 NabNear LLC, a Pennsylvania limited liability company.</span><span>Park first, then tap. Never use your phone while driving.</span></div>
+</div></footer>
 </body></html>
