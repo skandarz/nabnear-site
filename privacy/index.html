@@ -2,7 +2,7 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | NabNear</title><meta name="description" content="How NabNear handles data: no name or email, location only when you tap, no selling of data.">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#040E1C"><link rel="canonical" href="https://nabnear.com/privacy/">
+<meta name="theme-color" content="#0F2340"><link rel="canonical" href="https://nabnear.com/privacy/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="NabNear"><meta property="og:title" content="Privacy Policy | NabNear"><meta property="og:description" content="How NabNear handles data: no name or email, location only when you tap, no selling of data."><meta property="og:image" content="https://nabnear.com/og.png"><meta property="og:url" content="https://nabnear.com/privacy/"><meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css">
@@ -25,12 +25,12 @@
 <p>A spot you post is shown on the map to all NabNear users for up to 4 minutes, or until it closes. Drivers who tapped Heading there for it can still see that spot, to report what happened, until 15 minutes after it expires.</p>
 <h2>What we do not do</h2>
 <ul><li>We do not sell or rent personal information, or share it for advertising.</li>
-<li>We do not include advertising or analytics tools in the app. If we add a crash-reporting tool, we will name it here before that version is released.</li>
+<li>We do not include advertising or analytics tools in the app. Crash reports go to Sentry, named in the table below, and never include your location or account ID.</li>
 <li>We keep your posts linked to your account ID for 90 days. We do not use them to profile you or to follow where you go.</li></ul>
 <h2>Service providers</h2>
 <p>We use these companies to run the app. Each handles data under its own terms and privacy policy.</p>
 <div class="tbl"><table><thead><tr><th>Provider</th><th>Purpose</th><th>What it receives</th></tr></thead><tbody><tr><td>Supabase</td><td>Database, anonymous sign-in, request logs</td><td>Everything in the table above; request logs with IP address and device type, kept 7 days; daily backups kept 7 days. Data is stored in the United States (Ohio).</td></tr><tr><td>Expo (650 Industries)</td><td>Sending alerts to the right phone</td><td>Your push token and the alert text (distance to a spot, no exact location)</td></tr><tr><td>Google (Firebase Cloud Messaging; Maps SDK for Android)</td><td>Delivering alerts on Android; the map on Android</td><td>Push token and alert text; the map component on your phone talks to Google directly; on Android, an address you type in Alert me at… is looked up by your phone's built-in Google address service</td></tr><tr><td>Apple (Apple Push Notification service; MapKit)</td><td>Delivering alerts on iPhone; the map on iPhone</td><td>Push token and alert text; the map component on your phone talks to Apple directly; on iPhone, an address you type in Alert me at… is looked up by Apple's address service</td></tr><tr><td>Sentry (Functional Software, Inc.)</td><td>Crash reports</td><td>The crash report described above; it never receives your location or account ID</td></tr></tbody></table></div>
-<p>NabNear has no advertising, analytics or crash-reporting provider.</p>
+<p>NabNear has no advertising or analytics provider. Sentry, listed above, receives crash reports only.</p>
 <h2>Your choices and rights</h2>
 <ul><li>Location permission is needed to post a spot or choose an alert location. Notification permission is needed to receive alerts. You can browse the map without either. Turn them off at any time in your phone's settings.</li>
 <li>Stop alerts in the app with Stop. This deletes your alert location at once; your push token is kept so alerts work next time, until a deletion trigger above applies.</li>
