@@ -3,14 +3,14 @@
 @font-face{font-family:"Public Sans";src:url("/assets/fonts/public-sans.woff2") format("woff2");font-weight:100 900;font-display:swap}
 
 :root{
-  --night:#0F2340;      /* brand navy */
-  --asphalt:#183156;    /* raised dark surface */
-  --lane:#2A4570;       /* lines on dark */
+  --night:#040E1C;      /* brand navy */
+  --asphalt:#0B1A2E;    /* raised dark surface */
+  --lane:#1D2E47;       /* lines on dark */
   --curb:#FDBF27;       /* brand yellow: the one accent */
   --curb-deep:#E3A50C;
   --sidewalk:#EEF1F3;   /* light page background (cool, concrete) */
   --paper:#FFFFFF;
-  --ink:#0F2340;        /* text on light */
+  --ink:#071325;        /* text on light */
   --slate:#4F5C70;      /* secondary text on light */
   --mist:#A9B5C7;       /* secondary text on dark */
   --rule:#D5DBE3;
