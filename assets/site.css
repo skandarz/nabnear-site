@@ -69,6 +69,8 @@ a{color:inherit}
 .status i{width:9px;height:9px;border-radius:50%;background:var(--curb);box-shadow:0 0 0 4px rgba(253,191,39,.18)}
 .hero h1{font-family:var(--display);font-weight:800;font-stretch:72%;font-size:clamp(64px,10.5vw,152px);line-height:.86;letter-spacing:-.01em;margin:0 0 26px}
 .hero h1 span{display:block}
+.hero h1 .h1-park{color:var(--curb,#F6BE2C);font-size:.42em;line-height:1.1;margin-top:.35em;letter-spacing:0}
+.tagline{font-family:var(--display);font-weight:700;font-size:clamp(20px,2vw,26px);line-height:1.3;color:#fff;margin:0 0 14px}
 .lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:#D6DEE9;max-width:30em;margin:0 0 34px}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .street{position:relative}
