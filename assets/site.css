@@ -143,22 +143,27 @@ section{position:relative}
 .closer .wrap{align-items:flex-start}
 .early-copy{flex:1 1 320px;max-width:30em}
 .early-copy p{color:var(--slate);margin:12px 0 0}
-.early-form{flex:1 1 380px;max-width:520px;display:grid;gap:16px;background:var(--paper);border-radius:24px;padding:clamp(22px,3vw,32px)}
+.early-form{flex:1 1 380px;max-width:520px;display:grid;gap:16px;background:var(--night);color:#fff;border-radius:24px;padding:clamp(24px,3vw,36px);box-shadow:0 24px 48px -28px rgba(4,14,28,.55)}
 .early-form .field{display:grid;gap:6px;margin:0;padding:0;border:0;min-width:0}
-.early-form label,.early-form legend{font-weight:700;font-size:15px;padding:0}
+.early-form label,.early-form legend{font-weight:700;font-size:15px;padding:0;color:#fff}
+.early-form label span{color:var(--curb)}
 .early-form legend{margin-bottom:6px}
-.early-form input[type=text],.early-form input[type=email]{font:inherit;font-size:16px;color:var(--ink);background:var(--sidewalk);border:2px solid var(--rule);border-radius:12px;padding:12px 14px;width:100%}
-.early-form input:focus-visible{outline:3px solid var(--curb);outline-offset:1px;border-color:var(--night)}
-.early-form .choice{display:inline-flex;align-items:center;gap:8px;font-weight:500;margin-right:22px;cursor:pointer}
-.early-form .choice input{width:18px;height:18px;accent-color:var(--night)}
-.early-form button{justify-self:start;cursor:pointer}
-.early-form button:disabled{opacity:.6;cursor:default}
-.early-form .ea-fine{font-size:13px;color:var(--slate);margin:0}
-.ea-status{font-weight:700;margin:0}
-.ea-done{display:flex;gap:14px;align-items:flex-start;outline:none}
-.ea-done svg{flex:none;margin-top:2px}
-.ea-done p{margin:0;font-size:17px;line-height:1.5}
+.early-form input[type=text],.early-form input[type=email]{font:inherit;font-size:16px;color:#fff;background:var(--asphalt);border:2px solid var(--lane);border-radius:12px;padding:12px 14px;width:100%;transition:border-color .15s}
+.early-form input::placeholder{color:var(--mist);opacity:.8}
+.early-form input[type=text]:hover,.early-form input[type=email]:hover{border-color:#2C4366}
+.early-form input:focus-visible{outline:none;border-color:var(--curb);box-shadow:0 0 0 3px rgba(253,191,39,.25)}
+.early-form input:-webkit-autofill{-webkit-text-fill-color:#fff;-webkit-box-shadow:0 0 0 40px var(--asphalt) inset;caret-color:#fff}
+.early-form .choice{display:inline-flex;align-items:center;gap:8px;font-weight:500;margin-right:22px;cursor:pointer;color:#fff}
+.early-form .choice input{width:18px;height:18px;accent-color:var(--curb)}
+.early-form button{justify-self:start;cursor:pointer;margin-top:4px}
+.early-form button:disabled{opacity:.7;cursor:default}
+.early-form .ea-fine{font-size:13px;color:var(--mist);margin:0}
+.ea-status{font-weight:700;margin:0;color:var(--curb)}
 .early-form [hidden]{display:none!important}
+.ea-done{display:flex;gap:14px;align-items:flex-start;outline:none}
+.ea-done svg{flex:none;margin-top:3px}
+.ea-done p{margin:0;font-size:17px;line-height:1.5;color:var(--mist)}
+.ea-done strong{display:inline-block;font-family:var(--display);font-weight:800;font-size:22px;line-height:1.2;color:var(--curb);margin-bottom:4px}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
 /* ---------- Inner pages ---------- */
