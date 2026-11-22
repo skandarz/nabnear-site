@@ -108,13 +108,17 @@
 </form>
 </div></section>
 <script>
-(function(){var f=document.getElementById('early-form'),s=document.getElementById('ea-status');if(!f||!window.fetch)return;
+(function(){var f=document.getElementById('early-form');if(!f||!window.fetch)return;
+var KEY='nabnear-early';
+function done(msg){f.innerHTML='<div class="ea-done" role="status" tabindex="-1"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#FDBF27"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#040E1C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>'+msg[0]+'</strong><br>'+msg[1]+'</p></div>';var d=f.querySelector('.ea-done');d&&d.focus();}
+var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
+if(saved){done(['You’re already on the list.','We’ll email '+saved.replace(/[<>&"]/g,'')+' when the beta opens near you.']);return;}
 f.addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('ea-web').value)return;
-var b=f.querySelector('button');b.disabled=true;b.textContent='Sending\u2026';
+var b=f.querySelector('button'),em=document.getElementById('ea-email').value.trim();b.disabled=true;b.textContent='Sending…';
 fetch(f.action,{method:'POST',mode:'no-cors',body:new FormData(f)}).then(function(){
-f.querySelectorAll('.field,.hp,button,.ea-fine').forEach(function(el){el.hidden=true});
-s.hidden=false;s.textContent='Thanks, you\u2019re on the list. We\u2019ll email you when the beta opens near you.';s.focus&&s.setAttribute('tabindex','-1');s.focus();
-}).catch(function(){b.disabled=false;b.textContent='Request early access';s.hidden=false;s.textContent='That didn\u2019t go through. Check your connection and try again, or email hi@nabnear.com.';});
+try{localStorage.setItem(KEY,em)}catch(e){}
+done(['Sent. You’re on the list.','We’ll email you when the beta opens near you.']);
+}).catch(function(){b.disabled=false;b.textContent='Request early access';var s=document.getElementById('ea-status');s.hidden=false;s.textContent='That didn’t go through. Check your connection and try again, or email hi@nabnear.com.';});
 });})();
 </script>
 </main>

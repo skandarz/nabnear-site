@@ -155,6 +155,9 @@ section{position:relative}
 .early-form button:disabled{opacity:.6;cursor:default}
 .early-form .ea-fine{font-size:13px;color:var(--slate);margin:0}
 .ea-status{font-weight:700;margin:0}
+.ea-done{display:flex;gap:14px;align-items:flex-start;outline:none}
+.ea-done svg{flex:none;margin-top:2px}
+.ea-done p{margin:0;font-size:17px;line-height:1.5}
 .early-form [hidden]{display:none!important}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 
