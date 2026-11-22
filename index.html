@@ -10,8 +10,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap">
 <a href="/" class="brand" aria-label="NabNear home"><img src="/assets/logo-white.png" alt="NabNear" width="222" height="30"></a>
-<nav class="nav" aria-label="Main"><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a class="btn btn-curb btn-sm" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a></nav>
-<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="/" aria-current="page">Home</a><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a></div></details>
+<nav class="nav" aria-label="Main"><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a class="btn btn-curb btn-sm" href="/#early">Request early access</a></nav>
+<details class="menu"><summary>Menu</summary><div class="menu-panel"><a href="/" aria-current="page">Home</a><a href="/how-it-works/">How it works</a><a href="/about/">About</a><a href="/support/">Support</a><a href="/#early">Request early access</a></div></details>
 </div></header>
 <main id="main">
 <section class="hero"><div class="wrap">
@@ -20,7 +20,7 @@
 <h1><span>Stop</span><span>circling.</span><span class="h1-park">Start parking.</span></h1>
 <p class="tagline">Street parking, shared by drivers leaving.</p>
 <p class="lede">When a driver is about to leave a street spot, they tap once. When you&rsquo;re nearby and looking, you hear about it. That&rsquo;s NabNear. Free. No&nbsp;sign&#8209;up.</p>
-<div class="actions"><a class="btn btn-curb" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a><a class="btn btn-ghost" href="#how">See how it works</a></div>
+<div class="actions"><a class="btn btn-curb" href="/#early">Request early access</a><a class="btn btn-ghost" href="#how">See how it works</a></div>
 </div>
 <div class="street"><svg viewBox="0 0 640 520" role="img" aria-labelledby="st-title st-desc" xmlns="http://www.w3.org/2000/svg">
 <title id="st-title">A Philadelphia street seen from above</title>
@@ -91,16 +91,38 @@
 
 <section class="safety" aria-label="Safety"><div class="wrap"><svg viewBox="0 0 40 40" fill="none" stroke="#040E1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="4" width="16" height="30" rx="4"/><path d="M4 36L36 4"/></svg><p>Park first, then tap.<small>Never use NabNear while driving, including at red lights. Hand the phone to a passenger, or wait until you&rsquo;re parked.</small></p></div></section>
 
-<section class="band closer"><div class="wrap">
-<h2 class="h2">Want in early?</h2>
-<a class="btn btn-ink" href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Request early access</a>
+<section class="band closer" id="early" aria-labelledby="early-h"><div class="wrap">
+<div class="early-copy"><h2 class="h2" id="early-h">Want in early?</h2>
+<p>We&rsquo;re opening NabNear to drivers one Philadelphia neighborhood at a time. Leave your email and we&rsquo;ll invite you when the beta reaches you.</p></div>
+<form class="early-form" id="early-form" action="https://docs.google.com/forms/d/e/1FAIpQLSd926Bk09BWd0J9kRBh31HoPNeeavduIPlTWLvk7L2ZXB-b-g/formResponse" method="POST" target="_blank">
+<div class="field"><label for="ea-name">Name</label><input id="ea-name" name="entry.1895902981" type="text" autocomplete="name"></div>
+<div class="field"><label for="ea-email">Email <span aria-hidden="true">*</span></label><input id="ea-email" name="entry.986649059" type="email" autocomplete="email" required></div>
+<div class="field"><label for="ea-hood">Neighborhood</label><input id="ea-hood" name="entry.587116956" type="text" placeholder="e.g. Rittenhouse, Fishtown"></div>
+<fieldset class="field"><legend>Your phone</legend>
+<label class="choice"><input type="radio" name="entry.204317262" value="iPhone"> iPhone</label>
+<label class="choice"><input type="radio" name="entry.204317262" value="Android"> Android</label></fieldset>
+<div class="hp" aria-hidden="true"><label for="ea-web">Leave this empty</label><input id="ea-web" type="text" tabindex="-1" autocomplete="off"></div>
+<button class="btn btn-ink" type="submit">Request early access</button>
+<p class="ea-fine">We use your email only to invite you to the beta. No spam, and you can ask us to delete it anytime.</p>
+<p class="ea-status" id="ea-status" role="status" hidden></p>
+</form>
 </div></section>
+<script>
+(function(){var f=document.getElementById('early-form'),s=document.getElementById('ea-status');if(!f||!window.fetch)return;
+f.addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('ea-web').value)return;
+var b=f.querySelector('button');b.disabled=true;b.textContent='Sending\u2026';
+fetch(f.action,{method:'POST',mode:'no-cors',body:new FormData(f)}).then(function(){
+f.querySelectorAll('.field,.hp,button,.ea-fine').forEach(function(el){el.hidden=true});
+s.hidden=false;s.textContent='Thanks, you\u2019re on the list. We\u2019ll email you when the beta opens near you.';s.focus&&s.setAttribute('tabindex','-1');s.focus();
+}).catch(function(){b.disabled=false;b.textContent='Request early access';s.hidden=false;s.textContent='That didn\u2019t go through. Check your connection and try again, or email hi@nabnear.com.';});
+});})();
+</script>
 </main>
 <footer class="site-foot"><div class="wrap">
 <div class="foot-grid">
 <div><img src="/assets/logo-white.png" alt="NabNear" width="207" height="28">
 <address>NabNear LLC<br>216 Buckingham Pl, Floor 1<br>Philadelphia, PA 19104, USA<br><a href="mailto:hi@nabnear.com">hi@nabnear.com</a></address></div>
-<div><h2>NabNear</h2><ul><li><a href="/how-it-works/">How it works</a></li><li><a href="/about/">About</a></li><li><a href="/support/">Support</a></li><li><a href="mailto:hi@nabnear.com?subject=NabNear%20early%20access">Early access</a></li></ul></div>
+<div><h2>NabNear</h2><ul><li><a href="/how-it-works/">How it works</a></li><li><a href="/about/">About</a></li><li><a href="/support/">Support</a></li><li><a href="/#early">Early access</a></li></ul></div>
 <div><h2>Your data</h2><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/delete/">Delete your data</a></li></ul></div>
 </div>
 <div class="fine"><span>&copy; 2026 NabNear LLC, a Pennsylvania limited liability company.</span><span>Park first, then tap. Never use your phone while driving.</span></div>

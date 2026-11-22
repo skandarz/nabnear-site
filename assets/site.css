@@ -138,6 +138,25 @@ section{position:relative}
 .closer .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
 .closer .h2{margin:0}
 
+
+/* Early access form */
+.closer .wrap{align-items:flex-start}
+.early-copy{flex:1 1 320px;max-width:30em}
+.early-copy p{color:var(--slate);margin:12px 0 0}
+.early-form{flex:1 1 380px;max-width:520px;display:grid;gap:16px;background:var(--paper);border-radius:24px;padding:clamp(22px,3vw,32px)}
+.early-form .field{display:grid;gap:6px;margin:0;padding:0;border:0;min-width:0}
+.early-form label,.early-form legend{font-weight:700;font-size:15px;padding:0}
+.early-form legend{margin-bottom:6px}
+.early-form input[type=text],.early-form input[type=email]{font:inherit;font-size:16px;color:var(--ink);background:var(--sidewalk);border:2px solid var(--rule);border-radius:12px;padding:12px 14px;width:100%}
+.early-form input:focus-visible{outline:3px solid var(--curb);outline-offset:1px;border-color:var(--night)}
+.early-form .choice{display:inline-flex;align-items:center;gap:8px;font-weight:500;margin-right:22px;cursor:pointer}
+.early-form .choice input{width:18px;height:18px;accent-color:var(--night)}
+.early-form button{justify-self:start;cursor:pointer}
+.early-form button:disabled{opacity:.6;cursor:default}
+.early-form .ea-fine{font-size:13px;color:var(--slate);margin:0}
+.ea-status{font-weight:700;margin:0}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
 /* ---------- Inner pages ---------- */
 .page-head{background:var(--night);color:#fff;padding:clamp(48px,7vw,96px) 0 clamp(40px,6vw,72px)}
 .page-head h1{font-family:var(--display);font-weight:800;font-stretch:74%;font-size:clamp(52px,8vw,112px);line-height:.9;margin:0 0 18px;letter-spacing:-.005em}
