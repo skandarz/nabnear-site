@@ -164,6 +164,7 @@ section{position:relative}
 .early-form .agree input:focus-visible{outline:2px solid var(--curb);outline-offset:2px}
 .early-form button{justify-self:start;cursor:pointer;margin-top:4px}
 .early-form button:disabled{opacity:.7;cursor:default}
+.early-form .ea-note{font-size:13px;color:var(--mist);margin:6px 0 0}
 .early-form .ea-fine{font-size:13px;color:var(--mist);margin:0}
 .ea-status{font-weight:700;margin:0;color:var(--curb)}
 .early-form [hidden]{display:none!important}
