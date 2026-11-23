@@ -110,7 +110,7 @@
 </div></section>
 <script>
 (function(){var f=document.getElementById('early-form');if(!f)return;
-var ag=document.getElementById('ea-agree'),btn=f.querySelector('button[type=submit]');function sync(){if(btn&&ag)btn.disabled=!ag.checked;}if(ag){ag.addEventListener('change',sync);sync();}
+var ag=document.getElementById('ea-agree'),btn=f.querySelector('button[type=submit]');function sync(){var em=document.getElementById('ea-email'),ph=f.querySelector('input[type=radio]:checked');if(btn)btn.disabled=!(ag&&ag.checked&&ph&&em&&em.value.trim()&&em.checkValidity());}f.addEventListener('input',sync);f.addEventListener('change',sync);sync();
 if(!window.fetch)return;
 var KEY='nabnear-early';
 function done(msg){f.innerHTML='<div class="ea-done" role="status" tabindex="-1"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#FDBF27"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#040E1C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>'+msg[0]+'</strong><br>'+msg[1]+'</p></div>';var d=f.querySelector('.ea-done');d&&d.focus();}
@@ -121,7 +121,7 @@ var b=f.querySelector('button'),em=document.getElementById('ea-email').value.tri
 fetch(f.action,{method:'POST',mode:'no-cors',body:new FormData(f)}).then(function(){
 try{localStorage.setItem(KEY,em)}catch(e){}
 done(['Nabbed! You’re on your way to your next spot.','We’ll email you when NabNear pulls into your neighborhood.']);
-}).catch(function(){b.disabled=!(ag&&ag.checked);b.textContent='Request early access';var s=document.getElementById('ea-status');s.hidden=false;s.textContent='That didn’t go through. Check your connection and try again, or email hi@nabnear.com.';});
+}).catch(function(){sync();b.textContent='Request early access';var s=document.getElementById('ea-status');s.hidden=false;s.textContent='That didn’t go through. Check your connection and try again, or email hi@nabnear.com.';});
 });})();
 </script>
 </main>
