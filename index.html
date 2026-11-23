@@ -102,23 +102,26 @@
 <label class="choice"><input type="radio" name="entry.204317262" value="iPhone"> iPhone</label>
 <label class="choice"><input type="radio" name="entry.204317262" value="Android"> Android</label></fieldset>
 <div class="hp" aria-hidden="true"><label for="ea-web">Leave this empty</label><input id="ea-web" type="text" tabindex="-1" autocomplete="off"></div>
+<label class="agree" for="ea-agree"><input id="ea-agree" type="checkbox" name="entry.1327439314" value="I agree" required><span>I agree to the <a href="/beta-terms/" target="_blank" rel="noopener">NabNear Beta Tester Terms</a>, the <a href="/terms/" target="_blank" rel="noopener">Terms of Use</a> and the <a href="/privacy/" target="_blank" rel="noopener">Privacy Policy</a>. I&rsquo;ll keep the beta confidential and only use the app when safely parked, never while driving. <span aria-hidden="true">*</span></span></label>
 <button class="btn btn-curb" type="submit">Request early access</button>
 <p class="ea-fine">We use your email only to invite you to the beta. No spam, and you can ask us to delete it anytime.</p>
 <p class="ea-status" id="ea-status" role="status" hidden></p>
 </form>
 </div></section>
 <script>
-(function(){var f=document.getElementById('early-form');if(!f||!window.fetch)return;
+(function(){var f=document.getElementById('early-form');if(!f)return;
+var ag=document.getElementById('ea-agree'),btn=f.querySelector('button[type=submit]');function sync(){if(btn&&ag)btn.disabled=!ag.checked;}if(ag){ag.addEventListener('change',sync);sync();}
+if(!window.fetch)return;
 var KEY='nabnear-early';
 function done(msg){f.innerHTML='<div class="ea-done" role="status" tabindex="-1"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#FDBF27"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#040E1C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><p><strong>'+msg[0]+'</strong><br>'+msg[1]+'</p></div>';var d=f.querySelector('.ea-done');d&&d.focus();}
 var saved=null;try{saved=localStorage.getItem(KEY)}catch(e){}
 if(saved){done(['Nabbed! You’re already on the list.','We’ll email '+saved.replace(/[<>&"]/g,'')+' when NabNear pulls into your neighborhood.']);return;}
-f.addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('ea-web').value)return;
+f.addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('ea-web').value)return;if(ag&&!ag.checked){sync();ag.focus();return;}
 var b=f.querySelector('button'),em=document.getElementById('ea-email').value.trim();b.disabled=true;b.textContent='Sending…';
 fetch(f.action,{method:'POST',mode:'no-cors',body:new FormData(f)}).then(function(){
 try{localStorage.setItem(KEY,em)}catch(e){}
 done(['Nabbed! You’re on your way to your next spot.','We’ll email you when NabNear pulls into your neighborhood.']);
-}).catch(function(){b.disabled=false;b.textContent='Request early access';var s=document.getElementById('ea-status');s.hidden=false;s.textContent='That didn’t go through. Check your connection and try again, or email hi@nabnear.com.';});
+}).catch(function(){b.disabled=!(ag&&ag.checked);b.textContent='Request early access';var s=document.getElementById('ea-status');s.hidden=false;s.textContent='That didn’t go through. Check your connection and try again, or email hi@nabnear.com.';});
 });})();
 </script>
 </main>
@@ -127,7 +130,7 @@ done(['Nabbed! You’re on your way to your next spot.','We’ll email you when 
 <div><img src="/assets/logo-white.png" alt="NabNear" width="207" height="28">
 <address>NabNear LLC<br>216 Buckingham Pl, Floor 1<br>Philadelphia, PA 19104, USA<br><a href="mailto:hi@nabnear.com">hi@nabnear.com</a></address></div>
 <div><h2>NabNear</h2><ul><li><a href="/how-it-works/">How it works</a></li><li><a href="/about/">About</a></li><li><a href="/support/">Support</a></li><li><a href="/#early">Early access</a></li></ul></div>
-<div><h2>Your data</h2><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/delete/">Delete your data</a></li></ul></div>
+<div><h2>Your data</h2><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/beta-terms/">Beta Tester Terms</a></li><li><a href="/delete/">Delete your data</a></li></ul></div>
 </div>
 <div class="fine"><span>&copy; 2026 NabNear LLC, a Pennsylvania limited liability company.</span><span>Park first, then tap. Never use your phone while driving.</span></div>
 </div></footer>
